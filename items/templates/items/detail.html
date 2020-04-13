@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Item: {{item.name}}
+{% endblock %}
+
+{% block content %}
+<h1>{{item.name}}</h1>
+<p>{{item.date}} {{item.price}} {{item.category}}</p>
+
+<a href="{% url 'home' %}">Home</a>
+
+{% endblock %}
