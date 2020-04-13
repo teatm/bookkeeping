@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Bookkeeping{% endblock %}
+
+{% block content %}
+<h1>Bookkeeping</h1>
+
+<h2>Items</h2>
+
+<ul>
+    {% for item in items %}
+    <li>
+        <a href="{% url 'detail' item.id %}">
+            {{item.name}}
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'categories' %}">Categories</a>
+
+{% endblock %}
